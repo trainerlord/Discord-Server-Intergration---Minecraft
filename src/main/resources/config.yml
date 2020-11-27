@@ -1,0 +1,15 @@
+#ID For Your Discord Bot
+Discord_api_token:
+#ID For Your Discord Server
+Discord_Guild_Id:
+
+#ID For The Channel you want messages synced
+Discord_IRC: false
+Discord_IRC_Channel_Id:
+#add Role Connections
+#you can add as many as you want
+
+Synced_Roles: false
+Roles:
+  #VVV How the Role Connection Should be layed out
+  #<role_name>: <lp_group>
