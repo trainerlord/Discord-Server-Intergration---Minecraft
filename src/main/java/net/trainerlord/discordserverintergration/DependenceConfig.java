@@ -35,7 +35,7 @@ public class DependenceConfig {
     public String getPlayerAccount() {
         File dconfig = new File("plugins//Discord-Server-Intergration//dependence.yml");
         YamlConfiguration dcfg = YamlConfiguration.loadConfiguration(dconfig);
-        return dcfg.getString(this.uuid.toString() + ".id");
+        return dcfg.getString("users." +this.uuid.toString() + ".id");
     }
 
     private void setConfig() {

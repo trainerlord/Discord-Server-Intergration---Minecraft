@@ -35,8 +35,17 @@ public class ServerEvents implements CommandExecutor {
             case "roles":
                 if (sender instanceof Player) {
                     Player p = (Player) sender;
-                    DependenceConfig dc = new DependenceConfig(p.getUniqueId());
-                    p.sendMessage("§8[§3Discord§8]§3 " + MergeRoles(dc.getPlayerAccount(),DiscordServerIntergration.plugin, p));
+                    if (DiscordServerIntergration.plugin.getConfig().getBoolean("Synced_Roles")) {
+                        DependenceConfig dc = new DependenceConfig(p.getUniqueId());
+                        if (dc.getPlayerAccount() == null) {
+                            p.sendMessage("§8[§3Discord§8]§3 Discord Account Not Linked");
+                            return true;
+                        }
+                        p.sendMessage("§8[§3Discord§8]§3 Discord Roles Have Been Synced");
+                        Utils.MergeRoles(dc.getPlayerAccount(),DiscordServerIntergration.plugin, p);
+                    } else {
+                        p.sendMessage("§8[§3Discord§8]§3 Syncing roles has not been enabled on this Server");
+                    }
                     return true;
                 }
                 return false;
