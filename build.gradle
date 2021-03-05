@@ -85,7 +85,7 @@ dependencies {
     testImplementation mockBukkit()
     testImplementation 'org.assertj:assertj-core:3.+'
     compile 'net.dv8tion:JDA:4.2.0_222'
-    compileOnly 'net.luckperms:api:5.2'
+    compileOnly 'net.luckperms:api:5.3'
 }
 
 shadowJar {
