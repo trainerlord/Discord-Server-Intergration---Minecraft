@@ -84,7 +84,7 @@ dependencies {
     testImplementation "org.mockito:mockito-core:3.+"
     testImplementation mockBukkit()
     testImplementation 'org.assertj:assertj-core:3.+'
-    compile 'net.dv8tion:JDA:4.2.0_222'
+    compile 'net.dv8tion:JDA:4.2.0_239'
     compileOnly 'net.luckperms:api:5.2'
 }
 
